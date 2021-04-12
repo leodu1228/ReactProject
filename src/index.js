@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TickClass from './Components/TickClass/';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <TickClass></TickClass>
   </React.StrictMode>,
   document.getElementById('root')
 );
