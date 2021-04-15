@@ -1,10 +1,10 @@
 import React from 'react';
 
-class Cat extends React.Component{
+class ManLogo extends React.Component{
   render(){
     const mouse = this.props.mouse;
     return(
-      <img src = {[require("../../cat.jpg")]} style={{position: 'absolute', left: mouse.x,
+      <img alt= '' src="../../man.png" style={{position: 'absolute', left: mouse.x,
       top: mouse.y}}/>
     );
   }
@@ -37,12 +37,12 @@ class Mouse extends React.Component {
 class MouseTracker extends React.Component{
   render(){
     return(
-      <>
-      <h1>Move the mouse around!</h1>
-      <Mouse render={mouse=>(
-        <Cat mouse={mouse} />
-      )}/>
-      </>
+      <div>
+        <h1>Move the mouse around!</h1>
+        <Mouse render={mouse=>(
+            <ManLogo mouse={mouse} /> // render props
+          )}/>
+      </div>
     );
   }
 }

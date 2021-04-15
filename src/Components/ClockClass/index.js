@@ -1,5 +1,6 @@
 import React from 'react';
-// Version 1
+
+// // Version 1
 // export default class ClockClass extends React.Component{
 //     constructor(props) {
 //         super(props);
@@ -30,7 +31,6 @@ import React from 'react';
 //     }
 // };
 
-
 /*
 當 prop 或 state 有變化時，就會產生更新。當一個 component 被重新 render 時，其生命週期將會依照下列的順序呼叫這些方法：
 
@@ -46,7 +46,7 @@ import React from 'react';
 export default class ClockClass extends React.Component{
   constructor(props){
   super(props);
-  this.state= {time: new Date()}
+  this.state= {time: new Date()} // 初始化 state.time的值
   }
 
 
