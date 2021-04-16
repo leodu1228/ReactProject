@@ -4,10 +4,10 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ClockClass from './Components/ClockClass';
 import ClockFunc from './Components/ClockFunc';
-import Button from './Components/Button';
 import Progress from './Components/Progress';
 import Fetch from './Components/Fetch';
 import Baby from './Components/Baby';
+import ShowClickOnTitle from './Components/ShowCLickOnTitle';
 
 // ReactDOM.render 傳入兩個參數
 ReactDOM.render(
@@ -15,7 +15,7 @@ ReactDOM.render(
     <ClockFunc></ClockFunc>
     <ClockClass></ClockClass>
     <Progress></Progress>
-    <Button></Button>
+    <ShowClickOnTitle></ShowClickOnTitle>
     <Fetch></Fetch>
     <Baby></Baby>
   </React.StrictMode>,
