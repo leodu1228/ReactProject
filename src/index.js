@@ -7,6 +7,7 @@ import ClockFunc from './Components/ClockFunc';
 import Button from './Components/Button';
 import Progress from './Components/Progress';
 import Fetch from './Components/Fetch';
+import Baby from './Components/Baby';
 
 // ReactDOM.render 傳入兩個參數
 ReactDOM.render(
@@ -16,6 +17,7 @@ ReactDOM.render(
     <Progress></Progress>
     <Button></Button>
     <Fetch></Fetch>
+    <Baby></Baby>
   </React.StrictMode>,
   document.getElementById('root')
 );
