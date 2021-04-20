@@ -2,22 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ClockClass from './Components/ClockClass';
-import ClockFunc from './Components/ClockFunc';
-import Progress from './Components/Progress';
-import Fetch from './Components/Fetch';
-import Baby from './Components/Baby';
-import ShowClickOnTitle from './Components/ShowCLickOnTitle';
+import MessageForm from './Components/MessageForm';
+
+let data = [{number:'1',name:'Leo',message:'阿還有沒有作業'},
+            {number:'2',name:'Paddy',message:'再不交作業阿垃圾們'},
+            {number:'3',name:'Kisumi',message:'再兩天啦'},]
+
 
 // ReactDOM.render 傳入兩個參數
 ReactDOM.render(
   <React.StrictMode>
-    <ClockFunc></ClockFunc>
-    <ClockClass></ClockClass>
-    <Progress></Progress>
-    <ShowClickOnTitle></ShowClickOnTitle>
-    <Fetch></Fetch>
-    <Baby></Baby>
+    <MessageForm messageData ={data}></MessageForm>
   </React.StrictMode>,
   document.getElementById('root')
 );
