@@ -47,10 +47,12 @@ function Message(props) {
 // }
 function MessageBlock(props) {
     //用map迴圈把每筆留言的資料都用props傳進Message組件放好，再指定給message
-    let message = props.messageData.map((item) => {
-        //判斷留言者item.name中是否有this.props.searchName的值，如果有就執行，沒有就不動作
-        if (item.name.indexOf(props.searchName) !== -1)
-            return <Message name={item.name} message={item.message} />
+    let message = props.messageData
+    //判斷留言者item.name中是否有this.props.searchName的值，如果有就執行，沒有就不動作
+        .filter(item => item.name.indexOf(props.searchName !==-1))
+        .map((item,index) => {
+            // 必須給key 讓每個元件是唯一的 
+            return <Message key={index} name={item.name} message={item.message} />
     })
 
     return (
