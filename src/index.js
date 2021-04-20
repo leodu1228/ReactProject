@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MessageForm from './Components/MessageForm';
+import Message from './Components/Message';
 
 let data = [{number:'1',name:'Leo',message:'阿還有沒有作業'},
             {number:'2',name:'Paddy',message:'再不交作業阿垃圾們'},
@@ -13,6 +14,7 @@ let data = [{number:'1',name:'Leo',message:'阿還有沒有作業'},
 ReactDOM.render(
   <React.StrictMode>
     <MessageForm messageData ={data}></MessageForm>
+    <Message />
   </React.StrictMode>,
   document.getElementById('root')
 );
