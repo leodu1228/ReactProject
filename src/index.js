@@ -2,19 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MessageForm from './Components/MessageForm';
-import Message from './Components/Message';
+import MessageBoard from './Components/MessageBoard';
 
-let data = [{number:'1',name:'Leo',message:'阿還有沒有作業'},
-            {number:'2',name:'Paddy',message:'再不交作業阿垃圾們'},
-            {number:'3',name:'Kisumi',message:'再兩天啦'},]
+let data = [{name:'Leo',message:'阿還有沒有作業'},
+            {name:'Paddy',message:'再不交作業阿垃圾們'},
+            {name:'Kisumi',message:'再兩天啦'},]
 
 
 // ReactDOM.render 傳入兩個參數
 ReactDOM.render(
   <React.StrictMode>
-    <MessageForm messageData ={data}></MessageForm>
-    <Message />
+    <MessageBoard messageData ={data}></MessageBoard>
   </React.StrictMode>,
   document.getElementById('root')
 );
