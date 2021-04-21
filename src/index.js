@@ -4,15 +4,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MessageBoard from './Components/MessageBoard';
 
-let data = [{name:'Leo',message:'阿還有沒有作業'},
-            {name:'Paddy',message:'再不交作業阿垃圾們'},
-            {name:'Kisumi',message:'再兩天啦'},]
+// let data = [{name:'Leo',message:'阿還有沒有作業'},
+//             {name:'Paddy',message:'再不交作業阿垃圾們'},
+//             {name:'Kisumi',message:'再兩天啦'},]
 
 
 // ReactDOM.render 傳入兩個參數
 ReactDOM.render(
   <React.StrictMode>
-    <MessageBoard messageData ={data}></MessageBoard>
+      <MessageBoard></MessageBoard>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,33 +1,22 @@
 import React from 'react';
+import MessageContainer from './MessageContainer';
+import MessageHead from './MessageHead';
+import MessageAuthor from './MessageAuthor';
+import MessageTime from './MessageTime';
+import MessageBody from './MessageBody';
 
-
-// Class Component版本
-// 負責處理每一則留言的格式
-// class Message extends React.Component{
-//     render(){
-//         let divStyle={marginBottom:20}
-//         let messageStyle={marginLeft:20}
-//         return(
-//             <div style={divStyle}>
-//                 {/*把每筆傳進來的留言資料都放好後回傳*/}
-//                 <div>{this.props.name}說：</div>
-//                 <div style={messageStyle}>{this.props.message}</div>
-//             </div>
-//         )
-//     }
-// }
 
 // function component版本
-const Message =(name, message) => {
-    let divStyle = { marginBottom: 20 }
-    let messageStyle = { marginLeft: 20 }
-    return (
-        <div style={divStyle}>
-            {/*把每筆傳進來的留言資料都放好後回傳*/}
-            <div>{name}說：</div>
-            <div style={messageStyle}>{message}</div>
-        </div>
-    )
+const Message = ({ author, time, children }) => {
+  return (
+    <MessageContainer>
+      <MessageHead>
+        <MessageAuthor>{author}</MessageAuthor>
+        <MessageTime>{time}</MessageTime>
+      </MessageHead>
+      <MessageBody>{children}</MessageBody>
+    </MessageContainer>
+  )
 }
 
-export default  Message;
+export default Message;

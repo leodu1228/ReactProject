@@ -1,48 +1,34 @@
-import React, { useState } from 'react';
-import SearchBlock from './SearchBlock';
+import React from 'react';
+import Page from './Page';
+import Title from './Title';
+import MessageForm from './MessageForm';
+import MessageLable from './MessageLabel';
+import MessageTextArea from './MessageTextArea';
+import SubmitButton from './SubitButton';
 import MessageBlock from './MessageBlock';
+import Message from './Message';
 
 
 
-const MessageBoard = ({messageData})=> {
-    const [name, changeState] = useState('');
 
-    return (
-        <div>
-            <SearchBlock searchName={name} changeState={(event) => { changeState(event.target.value) }}></SearchBlock>
-            <hr />
-            <MessageBlock searchName={name} messageData={messageData} ></MessageBlock>
-        </div>
+const MessageBoard = ()=> {
+    return(
+        <Page>
+        <Title>React 留言板</Title>
+        <MessageForm>
+          <MessageLable>留言內容</MessageLable>
+          <MessageTextArea rows={8} />
+          <SubmitButton>送出</SubmitButton>
+        </MessageForm>
+        <MessageBlock>
+          <Message author={"Heidi"} time="2020-12-05 12:12:12">一則留言</Message>
+        </MessageBlock>
+      </Page>
     )
 }
 
 export default MessageBoard;
 
-// export default class MessageBoard extends React.Component {
-//     constructor(props){
-//         super(props)
-//         this.state = ({name:''})
-
-//         // changeState用來在使用者輸入值的時候觸發事件，改變state
-//         this.changeState = this.changeState.bind(this)
-//     }
-
-//     changeState(event){
-//         this.setState({name:event.target.value})
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//                 {/*把state中的name和執行的事件都用props給SearchBlock*/}
-//                 <SearchBlock searchName={this.state.name} changeState={this.changeState}></SearchBlock>
-//                 <hr/>
-//                  {/*傳入state的name用來篩選留言*/}
-//                 <MessageBlock messageData={this.props.messageData} searchName={this.state.name}></MessageBlock>
-//             </div>
-//         )
-//     }
-// }
 
 
 

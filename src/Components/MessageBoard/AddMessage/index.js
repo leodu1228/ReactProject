@@ -5,12 +5,12 @@ import Input from './Input';
 import Select from './Select';
 import { useMessage } from './useMessage';
 
-const Message = () => {
+const AddMessage = ({messageData}) => {
 	const { messages, setInputValue, addMessage } = useMessage();
 	return (
 		<Wrapper>
-            <Select />
-			<Input setInputValue={setInputValue} addMessage={addMessage} />
+            <Select messageData={messageData}/>
+			<Input messageData={messageData} setInputValue={setInputValue} addMessage={addMessage} />
 			{messages.map((item) => {
 				return <Content name={item.name} message={item.message} />;
 			})}
@@ -18,4 +18,4 @@ const Message = () => {
 	);
 };
 
-export default React.memo(Message);
+export default React.memo(AddMessage);
