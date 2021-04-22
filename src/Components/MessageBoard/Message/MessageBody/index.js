@@ -1,8 +1,14 @@
 import React from 'react';
+import '../../style.css';
 
-const MessageBody = () => {
+const MessageBody = ({children}) => {
+    const msgbodyStyle = {
+        marginTop: "8px",
+        wordBreak: "break-all",
+        whiteSpace: "pre-line",
+      }
     return(
-        <div className="MessageBody"></div>
+        <div style={msgbodyStyle}>{children}</div>
     )
 }
 

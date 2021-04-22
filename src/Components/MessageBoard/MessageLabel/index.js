@@ -1,8 +1,8 @@
 import React from 'react';
 
-const MessageLable = () => {
+const MessageLable = ({children}) => {
     return(
-        <div className='MessageLable'></div>
+        <div>{children}</div>
     )
 }
 

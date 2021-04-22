@@ -1,9 +1,9 @@
 import React from 'react';
-import Message from '..';
+import '../../style.css';
 
-const MessageHead = () => {
+const MessageHead = ({children}) => {
     return(
-        <div className='MessageHead'></div>
+        <div className='messageHead'>{children}</div>
     )
 }
 

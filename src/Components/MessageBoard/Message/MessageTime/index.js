@@ -1,9 +1,10 @@
 import React from 'react';
 
-const MessageTime = () => {
+const MessageTime = ({children}) => {
     return(
-        <div className="MessageTime"></div>
+        <div>{children}</div>
     )
 }
+
 
 export default MessageTime;

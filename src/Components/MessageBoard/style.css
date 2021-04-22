@@ -1,7 +1,7 @@
 
 
 /*contariner*/
-.Page{
+.page{
   max-width: 800px;
   margin: 0 auto;
   box-shadow: 0px 0px 16px rgb(199, 197, 197);
@@ -11,25 +11,28 @@
   box-sizing: border-box;
 };
 
-.Title{
+.title{
+  width:500px;
+  margin: 0 auto;
+  background: gray;
   text-align: center;
 };
 
 
 /*表單區塊 form*/
-.MessageForm{
+.messageForm{
   margin-top: 16px;
   font-size: 18px;
 };
 
-.MessageTextArea{
+.messageTextArea{
   display: block;
   margin-top: 8px;
   width: 95%;
   border-color: rgba(0, 0, 0, 0.125);
 };
 
-.SubmitButton{
+.submitButton{
   margin-top: 8px;
   color: #ddd;
   background-color: #343a40;
@@ -40,26 +43,26 @@
 };
 
 /*顯示留言區塊*/
-.MessageBlock{
+.messageBlock{
   margin-top: 16px;
 };
 
-.MessageContainer{
+.messageContainer{
   border: 1px solid rgba(0, 0, 0, 0.125);
   padding: 16px;
   border-radius: 4px;
 };
 
-.MessageHead{
+.messageHead{
   display: flex
 };
 
-.MessageAuthor{
+.messageAuthor{
   margin-right: 12px;
   color: #232323;
 };
 
-.MessageBody{
+.messageBody{
   margin-top: 8px;
   word-break: break-all;
   white-space: pre-line;

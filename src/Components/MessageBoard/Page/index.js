@@ -1,9 +1,8 @@
 import React from 'react';
-
-const Page = () => {
+import '../style.css';
+const Page = ({children}) => {
     return(
-        <div className='Page'>
-        </div>
+        <div className="page">{children}</div>
     )
 }
 

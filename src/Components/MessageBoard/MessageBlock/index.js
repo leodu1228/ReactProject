@@ -1,9 +1,9 @@
 import React from 'react';
+import "../style.css";
 
-const MessageBlock = () => {
+const MessageBlock = ({children}) => {
     return (
-        <div className='Messageblock'>
-        </div>
+        <div className="messageBlock">{children}</div>
     )
 }
 

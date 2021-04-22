@@ -1,8 +1,9 @@
 import React from 'react';
+import '../../style.css';
 
-const MessageAuthor = () => {
+const MessageAuthor = ({children}) => {
     return(
-        <div className='MessageAuthor'></div>
+        <div className='MessageAuthor'>{children}</div>
     )
 }
 

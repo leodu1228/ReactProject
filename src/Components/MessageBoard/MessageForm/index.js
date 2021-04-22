@@ -1,10 +1,15 @@
 import React from 'react';
+import '../style.css';
 
+const msgformStyle = {
+    border: "7px solid rgba(0, 0, 0, 0.125)",
+    padding: "10px",
+    borderRadius: "4px"
+}
 
-const MessageForm = () => {
+const MessageForm = ({children}) => {
     return(
-        <div className = "MessageForm">
-        </div>
+        <div style={msgformStyle}>{children}</div>
     )
 }
 
