@@ -1,9 +1,11 @@
 import React from 'react';
 import '../../style.css';
 
+const msgheadStyle = {  display: "flex"}
+
 const MessageHead = ({children}) => {
     return(
-        <div className='messageHead'>{children}</div>
+        <div style={msgheadStyle}>{children}</div>
     )
 }
 

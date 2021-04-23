@@ -1,9 +1,9 @@
 import React from 'react';
 
-const MessageLable = ({children}) => {
+const Lable = ({children}) => {
     return(
         <div>{children}</div>
     )
 }
 
-export default MessageLable;
+export default Lable;

@@ -1,9 +1,16 @@
 import React from 'react';
-import "../style.css";
+import Message from '../Message';
 
-const MessageBlock = ({children}) => {
+const MessageBlock = ({messageData, searchName, addMessageAuthor,addMessageBody}) => {
+    messageData[messageData.lengh+1] = {author:addMessageAuthor, time:new Date().toLocaleTimeString, body:addMessageBody}
+    let messages = messageData
+        .filter((item) => { return item.author.indexOf(searchName)!==-1})
+        .map((item, index) => {
+            return <Message key={index} author={item.author} time={item.time} body={item.body}></Message>
+      })
+
     return (
-        <div className="messageBlock">{children}</div>
+        <div>{messages}</div>
     )
 }
 

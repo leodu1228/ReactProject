@@ -1,32 +1,24 @@
-import React, { Children } from 'react';
+import React, { Children, useState } from 'react';
 import Page from './Page';
 import Title from './Title';
-import MessageForm from './MessageForm';
-import MessageLable from './MessageLabel';
-import MessageTextArea from './MessageTextArea';
-import SubmitButton from './SubitButton';
+import AddMessageForm from './AddMessageForm';
 import MessageBlock from './MessageBlock';
-import Message from './Message';
-import MessageSearch from './MessageSearch';
+import SearchBlock from './SearchBlock';
 
 
 
 const MessageBoard = ({messageData}) => {
-  let messages = messageData.map((item) => {
-    return <Message author={item.author} time={item.time} children={item.children}></Message>
-  })
 
+  const [searchName, setSearchName] = useState(''); // 將搜尋的名字存在state傳給 SearchBlock和 MessageBlock
+  const [addMessageBody, updateAddMessageBody] = useState('');
+  const [addMessageAuthor, updateAddMessageAuthor] = useState('')
   return (
     <Page>
-      <Title>React留言板</Title>
-      <MessageForm>
-        <MessageLable>來嘴一波</MessageLable>
-        <MessageTextArea rows={8} />
-        <SubmitButton>送出</SubmitButton>
-      </MessageForm>
-      <MessageBlock messageData={messageData}>
-          <MessageSearch></MessageSearch>
-        {messages}
+      <Title>天下第一嘴砲大會</Title>
+      <AddMessageForm messageData={messageData} updateAddMessageAuthor={updateAddMessageAuthor} updateAddMessageBody={updateAddMessageBody}></AddMessageForm>
+      <SearchBlock setSearchName ={setSearchName}></SearchBlock>
+      <MessageBlock messageData ={messageData} searchName={searchName} addMessageAuthor={addMessageAuthor} addMessageBody={addMessageBody}>
+        {/*多個Message, 由MessageBlock產生*/}
       </MessageBlock>
     </Page>
   )

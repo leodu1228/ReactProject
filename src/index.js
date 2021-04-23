@@ -4,9 +4,9 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MessageBoard from './Components/MessageBoard';
 
-const msgData = [{ author: "招貓", time: new Date().toLocaleTimeString(), children: "有一天, 我上班#$%^^#%$(*)@#" }
-  , { author: "Leo", time: new Date().toLocaleTimeString(), children: "我不想聽" }
-  , { author: "Paddy", time: new Date().toLocaleTimeString(), children: "講重點" }
+const msgData = [{ author: "招貓", time: new Date().toLocaleTimeString(), body: "有一天, 我上班#$%^^#%$(*)@#" }
+  , { author: "Leo", time: new Date().toLocaleTimeString(), body: "我不想聽" }
+  , { author: "Paddy", time: new Date().toLocaleTimeString(), body: "講重點" }
   , ]
 
 

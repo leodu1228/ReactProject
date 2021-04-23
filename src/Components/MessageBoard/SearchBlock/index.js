@@ -1,30 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 
-//SearchBlock
-// class SearchBlock extends React.Component {
-//     render() {
-//         let divStyle = { margin: 10 }
-//         return (
-//             <div style={divStyle}>
-//                 <span>搜尋留言人 : </span>
-//                 <input type="text"
-//                     value={this.props.searchName}
-//                     onChange={this.props.changeState}>
-//                 </input>
-//             </div>
-//         )
-//     }
-// }
-const SearchBlock = ({searchName, changeState}) => {
-    let divStyle = { margin: 10 }
-    return (
-        <div style={divStyle}>
-            <span>搜尋留言人 : </span>
-            <input type="text"
-                value={searchName}
-                onChange={changeState}>
-            </input>
+const searchStyle = {
+    margin: "30px 0px 5px 0px", // 上右下左的 margin
+    border: "3px solid rgba(0, 0, 0, 0.25)",
+    padding: "10px",
+    borderRadius: "4px"
+}
+
+const SearchBlock = ({setSearchName}) => {
+    return(
+        <div style={searchStyle}>
+            <span>搜尋嘴砲仔 : </span>
+            <input onChange={(event)=>(setSearchName(event.target.value))}
+                type="text" placeholder="輸入你心中的嘴砲仔"></input>
         </div>
     )
 }

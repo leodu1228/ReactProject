@@ -1,5 +1,4 @@
 import React from 'react';
-import '../style.css';
 
 const btnStyle = {
     margin: "8px 0px",
@@ -11,9 +10,9 @@ const btnStyle = {
     fontsize: "13px",
   }
 
-const SubmitButton = ({children}) => {
+const SubmitButton = ({}) => {
     return(
-        <button style={btnStyle}>{children}</button>
+        <button onClick={()=>{}} style={btnStyle}>送出</button>
     )
 }
 
