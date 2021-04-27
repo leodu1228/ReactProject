@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MessageBoard from './Components/MessageBoard';
+import Hooks from './Hook';
 
 const msgData = [{ author: "招貓", time: new Date().toLocaleTimeString(), body: "有一天, 我上班#$%^^#%$(*)@#" }
   , { author: "Leo", time: new Date().toLocaleTimeString(), body: "我不想聽" }
@@ -14,7 +15,8 @@ const msgData = [{ author: "招貓", time: new Date().toLocaleTimeString(), body
 // ReactDOM.render 傳入兩個參數
 ReactDOM.render(
   <React.StrictMode>
-      <MessageBoard messageData = {msgData}></MessageBoard>
+      <Hooks defaultName="first click"/>
+      {/* <MessageBoard messageData = {msgData}></MessageBoard> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
