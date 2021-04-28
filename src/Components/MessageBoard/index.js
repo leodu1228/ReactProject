@@ -9,14 +9,15 @@ import {useMessage} from './AddMessageForm/useMessage';
 
 const MessageBoard = ({messageData}) => {
   const [searchName, setSearchName] = useState(''); // 將搜尋的名字存在state傳給 SearchBlock和 MessageBlock
-  const {messages, name} = useMessage();
+  const {msgData, setMsgData} = useMessage(messageData);
+  const {messages, setMessages, name, setName} = useMessage();
 
   return (
     <Page>
-      <Title>天下第一嘴砲大會</Title>
-      <AddMessageForm messageData={messageData}></AddMessageForm>
+      <Title></Title>
+      <AddMessageForm msgData={msgData} setMsgData={setMsgData} name={name} setName={setName} messages={messages} setMessages={setMessages} ></AddMessageForm>
       <SearchBlock setSearchName ={setSearchName}></SearchBlock>
-      <MessageBlock messageData ={messageData} searchName={searchName} messsages={messages} name={name}>
+      <MessageBlock msgData ={msgData} searchName={searchName}>
         {/*多個Message, 由MessageBlock產生*/}
       </MessageBlock>
     </Page>

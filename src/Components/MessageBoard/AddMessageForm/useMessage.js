@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
-export const useMessage = ({data}) => {
+export const useMessage = (data) => {
     const [messages, setMessages] = useState();
     const [name, setName] = useState();
     const [msgData, setMsgData] = useState(data);

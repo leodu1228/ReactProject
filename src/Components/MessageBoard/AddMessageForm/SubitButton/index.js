@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {useMessage} from '../useMessage';
+import React from 'react';
+
 const btnStyle = {
     margin: "8px 0px",
     color: "black",
@@ -10,11 +10,9 @@ const btnStyle = {
     fontsize: "13px",
   }
 
-const SubmitButton = () => {
-    const {messages, name, msgData, setMsgData} = useMessage();
-
+const SubmitButton = ({name, messages, msgData, setMsgData}) => {
     return(
-        <button onClick={()=>{setMsgData(msgData.push({author:name, time:new Date().toLocaleTimeString(), body:messages}))}} style={btnStyle}>送出</button>
+        <button onClick={()=> setMsgData(msgData.push({author:name, time:new Date().toLocaleTimeString(), body:messages}))} style={btnStyle}>送出</button>
     )
 }
 

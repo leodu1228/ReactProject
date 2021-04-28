@@ -1,9 +1,8 @@
 import React from 'react';
-import '../style.css';
 
-const Title = ({children}) => {
+const Title = () => {
     return(
-        <h1 style={{textAlign:"center", margin: "0 auto"}}>{children}</h1>
+        <h1 style={{textAlign:"center", margin: "0 auto"}}>天下第一嘴砲大會</h1>
     )
 }
 

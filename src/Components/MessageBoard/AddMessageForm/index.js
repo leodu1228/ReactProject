@@ -10,13 +10,13 @@ const msgformStyle = {
     borderRadius: "4px"
 }
 
-const AddMessageForm = ({messageData}) => {
+const AddMessageForm = ({msgData, setMsgData,name, setName, messages, setMessages}) => {
     return(
         <div style={msgformStyle}>
             <Lable>來嘴一波</Lable>
-            <Select messageData={messageData}></Select>
-            <TextArea messageData={messageData}></TextArea>
-            <SubmitButton messageData={messageData}></SubmitButton>
+            <Select msgData={msgData} setName={setName}></Select>
+            <TextArea msgData={msgData} setMessages={setMessages}></TextArea>
+            <SubmitButton msgData={msgData} name={name} messages={messages} setMsgData={setMsgData}></SubmitButton>
         </div>
     )
 }
