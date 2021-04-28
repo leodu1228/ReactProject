@@ -1,8 +1,10 @@
 import React from 'react';
 import Message from '../Message';
+import {useMessage} from '../AddMessageForm/useMessage';
 
-const MessageBlock = ({messageData, searchName, addMessageAuthor,addMessageBody}) => {
-    messageData[messageData.lengh+1] = {author:addMessageAuthor, time:new Date().toLocaleTimeString, body:addMessageBody}
+const MessageBlock = ({messageData, searchName}) => {
+    const {msgData} = useMessage();
+    
     let messages = messageData
         .filter((item) => { return item.author.indexOf(searchName)!==-1})
         .map((item, index) => {

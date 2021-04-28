@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {useMessage} from '../useMessage';
 
 const textareaStyle = {
     // display: "block",
@@ -8,9 +8,11 @@ const textareaStyle = {
     borderColor: "rgba(0, 0, 0, 0.125)",
   }
 
-const TextArea = ({updateAddMessageBody}) => {
+const TextArea = ({messageData}) => {
+    const {setMessages} = useMessage(messageData);
     return(
-        <textarea  style={textareaStyle}  onchange={(event)=>(updateAddMessageBody(event.target.value))}></textarea>
+        <textarea style={textareaStyle} 
+        onChange={(e)=>(setMessages(e.target.value))}></textarea>
     )
 }
 
