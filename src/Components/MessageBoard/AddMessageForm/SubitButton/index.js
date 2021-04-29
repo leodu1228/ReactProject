@@ -12,7 +12,7 @@ const btnStyle = {
 
 const SubmitButton = ({name, messages, msgData, setMsgData}) => {
     return(
-        <button onClick={()=> setMsgData(msgData.push({author:name, time:new Date().toLocaleTimeString(), body:messages}))} style={btnStyle}>送出</button>
+        <button onClick={()=> setMsgData(msgData => msgData.push({author:name, time:new Date().toLocaleTimeString(), body:messages}))} style={btnStyle}>送出</button>
     )
 }
 
