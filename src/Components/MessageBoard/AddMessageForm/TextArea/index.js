@@ -8,10 +8,13 @@ const textareaStyle = {
     borderColor: "rgba(0, 0, 0, 0.125)",
   }
 
-const TextArea = ({setMessages}) => {
+const TextArea = ({messages, setMessages}) => {
+    const addMessages = (e) => {
+        setMessages(e.target.value)
+    }
+
     return(
-        <textarea style={textareaStyle} 
-        onChange={ e=>(setMessages(e.target.value))}></textarea>
+        <textarea onChange={addMessages} style={textareaStyle} ></textarea>
     )
 }
 

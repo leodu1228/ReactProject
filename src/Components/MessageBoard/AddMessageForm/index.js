@@ -14,8 +14,8 @@ const AddMessageForm = ({msgData, setMsgData,name, setName, messages, setMessage
     return(
         <div style={msgformStyle}>
             <Lable>來嘴一波</Lable>
-            <Select msgData={msgData} setName={setName}></Select>
-            <TextArea msgData={msgData} setMessages={setMessages}></TextArea>
+            <Select msgData={msgData} name={name} setName={setName}></Select>
+            <TextArea messages ={messages} setMessages={setMessages}></TextArea>
             <SubmitButton msgData={msgData} name={name} messages={messages} setMsgData={setMsgData}></SubmitButton>
         </div>
     )

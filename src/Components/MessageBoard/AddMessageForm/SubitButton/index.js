@@ -11,12 +11,15 @@ const btnStyle = {
   }
 
 const SubmitButton = ({name, messages, msgData, setMsgData}) => {
+
+    
+    const changeMsgData = () => {
+        setMsgData(msgData.push({author:name, time: new Date().toLocaleTimeString(), body: messages}))
+        console.log(msgData)
+    }
+        // (name!=='請輸入留言者姓名') ?  setMsgData(msgData.push({author:name, time: new Date().toLocaleTimeString, body: messages})) : window.alert('請選擇留言者姓名!')
     return(
-        <button onClick={ ()=> 
-            // (name!=='請輸入留言者姓名') ? setMsgData(msgData.push({author:name, tiem: new Date().toLocaleTimeString, body: messages})) : window.alert('請選擇留言者姓名!')
-            setMsgData(msgData.push({author:name, tiem: new Date().toLocaleTimeString, body: messages}))
-            } 
-            style={btnStyle}>送出</button>
+        <button onClick={changeMsgData} style={btnStyle}>送出</button>
     )
 }
 
