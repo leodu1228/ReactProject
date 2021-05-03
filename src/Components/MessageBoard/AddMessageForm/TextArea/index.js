@@ -11,7 +11,7 @@ const textareaStyle = {
 const TextArea = ({setMessages}) => {
     return(
         <textarea style={textareaStyle} 
-        onChange={(e)=>(setMessages(e.target.value))}></textarea>
+        onChange={ e=>(setMessages(e.target.value))}></textarea>
     )
 }
 

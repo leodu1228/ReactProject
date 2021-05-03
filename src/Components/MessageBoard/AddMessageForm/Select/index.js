@@ -6,8 +6,8 @@ const Select = ({msgData, setName}) => {
     })
     
     return(
-        <select onChange={(e)=> (setName(e.target.value))}>
-            <option key='first' value='first'>選擇留言姓名</option>
+        <select onChange={ e=> (setName(e.target.value))}>
+            <option key='0'  value='first'>選擇留言姓名</option>
             {options}
         </select>
     )

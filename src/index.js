@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MessageBoard from './Components/MessageBoard';
 
-const msgData = [{ author: "招貓", time: new Date().toLocaleTimeString(), body: "有一天, 我上班#$%^^#%$(*)@#" }
+const messageData = [{ author: "招貓", time: new Date().toLocaleTimeString(), body: "有一天, 我上班#$%^^#%$(*)@#" }
   , { author: "Leo", time: new Date().toLocaleTimeString(), body: "我不想聽" }
   , { author: "Paddy", time: new Date().toLocaleTimeString(), body: "講重點" }
   , ]
@@ -14,7 +14,7 @@ const msgData = [{ author: "招貓", time: new Date().toLocaleTimeString(), body
 // ReactDOM.render 傳入兩個參數
 ReactDOM.render(
   <React.StrictMode>
-      <MessageBoard messageData = {msgData}></MessageBoard>
+      <MessageBoard messageData = {messageData}></MessageBoard>
   </React.StrictMode>,
   document.getElementById('root')
 );
