@@ -8,12 +8,8 @@ const MessageBlock = ({msgData, searchName}) => {
         .map((item, index) => {
             return <Message key={index} author={item.author} time={item.time} body={item.body}></Message>
       })
-
-    let print = console.log(msgData, Array.isArray(msgData))
     return (
-        <div>{allMessages}
-            <div>{print}</div>
-        </div>
+            <div>{allMessages}</div>
     )
 }
 

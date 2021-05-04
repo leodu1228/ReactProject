@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const textareaStyle = {
     // display: "block",
     marginTop: "8px",
@@ -8,11 +7,7 @@ const textareaStyle = {
     borderColor: "rgba(0, 0, 0, 0.125)",
   }
 
-const TextArea = ({setMessages}) => {
-    const addMessages = (e) => {
-        setMessages(e.target.value)
-    }
-
+const TextArea = (addMessages) => {
     return(
         <textarea onChange={addMessages} style={textareaStyle} ></textarea>
     )

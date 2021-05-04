@@ -10,17 +10,9 @@ const btnStyle = {
     fontsize: "13px",
   }
 
-const SubmitButton = ({name, messages, msgData, setMsgData}) => {
-
-    
-    const changeMsgData = () => {
-        setMsgData(msgData.push({author:name, time:new Date().toLocaleTimeString(), body:messages}))
-        console.log(Array.isArray(msgData))
-        console.log(msgData)
-    }
-        
+const SubmitButton = (submit) => {        
     return(
-        <button onClick={changeMsgData} style={btnStyle}>送出</button>
+        <button onClick={submit} style={btnStyle}>送出</button>
     )
 }
 
