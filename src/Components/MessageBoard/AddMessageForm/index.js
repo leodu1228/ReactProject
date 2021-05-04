@@ -10,15 +10,15 @@ const msgformStyle = {
     borderRadius: "4px"
 }
 
-const AddMessageForm = ({msgData, setMsgData,name, setName, messages, setMessages}) => {
+const AddMessageForm = ({msgData, setMsgData, name, setName, messages, setMessages}) => {
     return(
         <div style={msgformStyle}>
             <Lable>來嘴一波</Lable>
-            <Select msgData={msgData} name={name} setName={setName}></Select>
+            <Select msgData={msgData} setMsgData={setMsgData} name={name} setName={setName}></Select>
             <TextArea messages ={messages} setMessages={setMessages}></TextArea>
             <SubmitButton msgData={msgData} name={name} messages={messages} setMsgData={setMsgData}></SubmitButton>
         </div>
     )
 }
 
-export default AddMessageForm;
+export default React.memo(AddMessageForm);

@@ -8,7 +8,7 @@ const textareaStyle = {
     borderColor: "rgba(0, 0, 0, 0.125)",
   }
 
-const TextArea = ({messages, setMessages}) => {
+const TextArea = ({setMessages}) => {
     const addMessages = (e) => {
         setMessages(e.target.value)
     }
@@ -17,5 +17,4 @@ const TextArea = ({messages, setMessages}) => {
         <textarea onChange={addMessages} style={textareaStyle} ></textarea>
     )
 }
-
-export default TextArea;
+export default React.memo(TextArea);

@@ -14,13 +14,14 @@ const SubmitButton = ({name, messages, msgData, setMsgData}) => {
 
     
     const changeMsgData = () => {
-        setMsgData(msgData.push({author:name, time: new Date().toLocaleTimeString(), body: messages}))
+        setMsgData(msgData.push({author:name, time:new Date().toLocaleTimeString(), body:messages}))
+        console.log(Array.isArray(msgData))
         console.log(msgData)
     }
-        // (name!=='請輸入留言者姓名') ?  setMsgData(msgData.push({author:name, time: new Date().toLocaleTimeString, body: messages})) : window.alert('請選擇留言者姓名!')
+        
     return(
         <button onClick={changeMsgData} style={btnStyle}>送出</button>
     )
 }
 
-export default SubmitButton;
+export default React.memo(SubmitButton);

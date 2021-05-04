@@ -1,4 +1,4 @@
-import React, { Children, useState } from 'react';
+import React from 'react';
 import Page from './Page';
 import Title from './Title';
 import AddMessageForm from './AddMessageForm';
@@ -11,11 +11,10 @@ const MessageBoard = ({messageData}) => {
   const {msgData, setMsgData} = useMessage(messageData); // 把傳入的messageData設定為msgData state的初始值
   const {messages, setMessages, name, setName} = useMessage();
   const {searchName, setSearchName} = useSearchMessage();
-  
   return (
     <Page>
       <Title></Title>
-      <AddMessageForm msgData={msgData} setMsgData={setMsgData} name={name} setName={setName} messages={messages} setMessages={setMessages} ></AddMessageForm>
+      <AddMessageForm msgData={msgData} setMsgData={setMsgData} name={name} setName={setName} messages={messages} setMessages={setMessages}></AddMessageForm>
       <SearchBlock setSearchName ={setSearchName}></SearchBlock>
       <MessageBlock msgData ={msgData} searchName={searchName}>
         {/*多個Message, 由MessageBlock產生*/}

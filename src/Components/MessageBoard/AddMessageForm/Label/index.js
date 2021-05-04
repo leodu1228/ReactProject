@@ -6,4 +6,4 @@ const Lable = ({children}) => {
     )
 }
 
-export default Lable;
+export default React.memo(Lable);
