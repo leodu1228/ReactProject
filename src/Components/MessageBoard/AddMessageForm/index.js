@@ -10,12 +10,12 @@ const msgformStyle = {
     borderRadius: "4px"
 }
 
-const AddMessageForm = ({msgData,submit,addName,addMessages}) => {
+const AddMessageForm = ({submit, setNameCallback, setMessagesCallback}) => {
     return(
         <div style={msgformStyle}>
             <Lable>來嘴一波</Lable>
-            <Select msgData={msgData} addName={addName}></Select>
-            <TextArea addMessages={addMessages}></TextArea>
+            <Select setNameCallback={setNameCallback}></Select>
+            <TextArea setMessagesCallback={setMessagesCallback}></TextArea>
             <SubmitButton submit={submit}></SubmitButton>
         </div>
     )

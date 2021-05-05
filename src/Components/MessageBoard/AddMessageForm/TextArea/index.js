@@ -7,9 +7,9 @@ const textareaStyle = {
     borderColor: "rgba(0, 0, 0, 0.125)",
   }
 
-const TextArea = (addMessages) => {
+const TextArea = ({setMessagesCallback}) => {
     return(
-        <textarea onChange={addMessages} style={textareaStyle} ></textarea>
+        <textarea onBlur={setMessagesCallback} style={textareaStyle} ></textarea>
     )
 }
 export default React.memo(TextArea);

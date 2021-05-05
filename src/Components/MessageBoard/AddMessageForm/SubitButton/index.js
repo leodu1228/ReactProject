@@ -10,7 +10,7 @@ const btnStyle = {
     fontsize: "13px",
   }
 
-const SubmitButton = (submit) => {        
+const SubmitButton = ({submit}) => {        
     return(
         <button onClick={submit} style={btnStyle}>送出</button>
     )
