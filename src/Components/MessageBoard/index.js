@@ -9,7 +9,6 @@ import { useSearchMessage } from './useSearchMessage';
 
 export const ThemeContext = React.createContext()
 
-
 const MessageBoard = ({ messageData }) => {
 	const [dark, setDark] = useState(true);
 
